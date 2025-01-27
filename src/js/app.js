@@ -19,6 +19,4 @@ export function characterState (character) {
   } else {
     return 'healthy';
   }
-
-  return
 }

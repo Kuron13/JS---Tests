@@ -6,9 +6,8 @@ const charList = [
   ['Лучник', 7, 'critical'],
   ['Нежить', -28, 'dead'],
 ]
-const handler = test.each(charList);
 
-handler('testing char %n with health %h', (name, health, expected) => {
+test.each(charList)('testing char %n with health %h', (name, health, expected) => {
   const result = charState({name: name, health: health});
   expect(result).toBe(expected);
 });
